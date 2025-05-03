@@ -1,0 +1,1 @@
+# Smartphone-Sensor-Based-Human-Activity-Recognition
