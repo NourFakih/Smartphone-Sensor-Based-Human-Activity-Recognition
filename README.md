@@ -1,9 +1,5 @@
 # Smartphone-Sensor-Based-Human-Activity-Recognition
-Here’s a complete and clear README.md draft for your GitHub repository based on your image and details:
-
----
-
-# Human Activity Recognition with Feature Engineering and Deep Fusion
+## Human Activity Recognition with Feature Engineering and Deep Fusion
 
 ## 📌 Motivation
 
