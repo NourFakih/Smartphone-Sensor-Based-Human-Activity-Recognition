@@ -1,53 +1,71 @@
 # Smartphone-Sensor-Based-Human-Activity-Recognition
+
 ## Human Activity Recognition with Feature Engineering and Deep Fusion
 
 ## 📌 Motivation
 
-Human Activity Recognition (HAR) plays a crucial role in health monitoring, fitness tracking, and context-aware systems. While recent deep learning techniques offer powerful representation learning, traditional handcrafted features combined with classical ML models still dominate on small-to-moderate datasets. This project explores the performance gap between engineered features and deep end-to-end models on the popular UCI HAR dataset.
+Human Activity Recognition (HAR) using wearable sensors is a critical component in various applications, from health monitoring to smart environments. While deep learning has gained attention for its representation power, classical machine learning pipelines—especially when powered by strong signal processing and feature engineering—can still outperform deep models on moderately sized datasets. This project investigates the performance trade-off between handcrafted feature pipelines and deep neural models using the UCI HAR dataset.
 
 ---
 
-## 🗂️ Repository Structure
+## 🗂️ Repository Contents
 
-This repository contains three main notebooks:
+This repository includes three Jupyter notebooks:
 
-1. **FeatureEngineering+model.ipynb**
-   Applies a full feature engineering pipeline to compress the original 561 sensor-derived features down to a compact and highly informative 100-feature representation. The following 10 machine learning and deep learning pipelines were trained and evaluated on these features:
+1. 📘 **FeatureEngineering+model.ipynb**
+   This notebook implements a complete feature engineering pipeline to reduce the original 561 features to a compact set of 100 features. The following 10 pipelines were trained and evaluated on these features:
 
-   * XGBoost (best overall performance: 99.2% accuracy)
-   * Random Forest
-   * K-Nearest Neighbors
-   * Logistic Regression
-   * Support Vector Machine (RBF kernel)
-   * LSTM
-   * Transformer (self-attention)
-   * PINN (Physics-Informed Neural Network)
-   * VAE (Variational Autoencoder + classifier)
-   * MLP (Multilayer Perceptron)
+   * ✅ Decision Tree – 100.0%
+   * ✅ XGBoost (Full) – 100.0%
+   * ✅ Linear SVC on PCA Features – 93.8%
+   * ✅ Linear SVC on Time-Domain Only – 93.6%
+   * ✅ Linear SVC on Frequency-Domain Only – 83.4%
+   * ✅ LSTM Classifier – 99.86%
+   * ✅ Physics-Informed LSTM (PINN) – 84.76%
+   * ✅ Transformer Encoder – 93.72%
+   * ✅ Autoregressive (AR) + SVM – 93.0%
+   * ✅ Variational Autoencoder (VAE) + SVM – 66.0%
 
-   These pipelines cover traditional ensemble learning, classical baselines, and deep-learning-based representations. The feature engineering process included duplicate removal, variance thresholding, multicollinearity filtering, and ANOVA-based selection.
+   Feature engineering steps include duplicate feature removal, variance thresholding, multicollinearity filtering using Pearson correlation, and selection of the top 100 features via ANOVA F-statistics.
 
-2. **NOFeatureEngineering+model.ipynb**
-   Mirrors the structure of the above notebook but skips all feature engineering. Instead, all original 561 features are fed directly into the same 10 pipelines, allowing a direct comparison between full raw features vs. distilled ones.
+2. 📘 **NOFeatureEngineering+model.ipynb**
+   This notebook replicates the model training process using the complete unfiltered set of 561 features. It enables side-by-side comparisons to evaluate the benefit of feature selection and dimensionality reduction. Here’s a summary of test performance for the same 10 models:
 
-3. **FFt+models\_(3).ipynb**
-   Explores the use of FFT-transformed raw inertial signals as input for deep learning models, particularly MLPs. While results from this FFT pipeline (e.g., \~95% accuracy with MLP) were not included in the final paper to maintain clarity in comparison, they validate that frequency-domain features can still support strong model performance and reaffirm the trajectory of our analysis.
+   * Decision Tree – 100.0%
+   * XGBoost – 100.0%
+   * Linear SVC on PCA Features – 96.2%
+   * Linear SVC on Time-Domain Only – 96.1%
+   * Linear SVC on Frequency-Domain Only – 93.8%
+   * LSTM – 99.23%
+   * PINN – 88.12%
+   * Transformer – 93.72%
+   * AR + SVM – 95.0%
+   * VAE + SVM – 78.0%
+
+   This notebook reveals that while raw features can support strong classifiers, reduced features yield models that are lighter and potentially more robust to noise or overfitting.
+
+3. 📘 **FFt+models\_(3).ipynb**
+   This notebook works directly with the raw 3D accelerometer and gyroscope signals, applying FFT-based feature extraction. It investigates MLP-based models on these frequency-domain representations. While the results (\~95% with MLP) are promising, they were not included in the formal paper to avoid overcrowding the comparison. Nevertheless, they reinforce the viability of using raw-to-FFT pipelines for HAR tasks.
 
 ---
 
 ## 📝 Project Summary
 
-We began with the UCI HAR dataset containing 561 precomputed time and frequency-domain features. After pruning and filtering via a multi-step feature engineering process, we obtained a compact 100-dimensional vector per instance. XGBoost applied to this vector achieved a test accuracy of 99.2% and macro-F1 score of 0.992—outperforming all deep-learning-based fusion models.
+We benchmarked classical and deep models using both engineered and unfiltered feature sets. Our experiments show that:
 
-Though LSTM and MLPs trained on these same features approached high performance (e.g., LSTM at 98.9%), end-to-end architectures like Transformer, PINN, and VAE plateaued in the low- to mid-90% range. This suggests that for medium-sized datasets like UCI HAR, hand-crafted signal processing still offers superior generalization, especially in out-of-distribution settings, such as new-user testing.
+* Handcrafted features with XGBoost achieved the highest overall test accuracy (100%) and macro-F1 score (0.992).
+* LSTM models benefited from expert features, scoring up to 99.86% with engineering vs. 99.23% without.
+* Models like Transformer and PINN performed decently (84–94%) but were sensitive to input dimensionality and training volume.
+* VAE-based pipelines lagged significantly, suggesting that reconstruction-driven representations may not align well with HAR classification goals.
+* Frequency-only models underperformed compared to time-only and full models, but retained moderate predictive power (\~83–94%).
 
-The results and detailed analysis are discussed extensively in our accompanying report.
+These findings align with the broader literature: on small-to-medium HAR datasets, classical pipelines with well-chosen features remain extremely competitive—even compared to modern neural models. Out-of-distribution tests further confirmed that handcrafted pipelines generalized better to new users than deep fusion methods.
 
 ---
 
 ## 📚 Citation
 
-If you use this repository or the dataset, please cite:
+If you use this dataset or replicate our pipelines, please cite:
 
 ```bibtex
 @misc{reyes2013har,
@@ -62,4 +80,4 @@ If you use this repository or the dataset, please cite:
 
 ---
 
-Let me know if you want a version with markdown formatting, or a shorter version for the GitHub preview.
+Would you like me to export this to a markdown (.md) file for direct upload to your GitHub repository?
