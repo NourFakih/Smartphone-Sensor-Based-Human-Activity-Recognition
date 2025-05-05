@@ -59,7 +59,7 @@ We benchmarked classical and deep models using both engineered and unfiltered fe
 * VAE-based pipelines lagged significantly, suggesting that reconstruction-driven representations may not align well with HAR classification goals.
 * Frequency-only models underperformed compared to time-only and full models, but retained moderate predictive power (\~83–94%).
 
-These findings align with the broader literature: on small-to-medium HAR datasets, classical pipelines with well-chosen features remain extremely competitive—even compared to modern neural models. Out-of-distribution tests further confirmed that handcrafted pipelines generalized better to new users than deep fusion methods.
+These findings align with the broader literature: on small-to-medium HAR datasets, classical pipelines with well-chosen features remain extremely competitive—even compared to modern neural models.
 
 ---
 
