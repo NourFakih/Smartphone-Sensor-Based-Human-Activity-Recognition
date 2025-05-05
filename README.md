@@ -48,6 +48,7 @@ This repository includes three Jupyter notebooks:
    This notebook works directly with the raw 3D accelerometer and gyroscope signals, applying FFT-based feature extraction. It investigates MLP-based models on these frequency-domain representations. While the results (\~95% with MLP) are promising, they were not included in the formal paper to avoid overcrowding the comparison. Nevertheless, they reinforce the viability of using raw-to-FFT pipelines for HAR tasks.
 
 ---
+> Several modeling ideas were adapted or extended from public Kaggle notebooks that inspired our pipelines \[1]\[2]\[3]\[4]. Their thoughtful analyses, modeling strategies, and clean implementation were instrumental in shaping the final structure of our experiments.
 
 ## 📝 Project Summary
 
@@ -77,27 +78,15 @@ If you use this dataset or replicate our pipelines, please cite:
   note         = {Accessed: 2025-05-04}
 }
 ```
-Great! Here's how you can acknowledge the Kaggle notebooks that supported your work in your README under a new Acknowledgments section:
 
----
 
-## 🙏 Acknowledgments
+## 📚 References
 
-We would like to thank the authors of the following Kaggle notebooks, whose insights and implementations significantly helped guide our development and experimentation for this project:
+\[1] Morris B. (n.d.). What does your smartphone know about you? Kaggle. [https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook](https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook)
+\[2] Chunduru P. (n.d.). SVM for Multiclass Classification. Kaggle. [https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification](https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification)
+\[3] Mohamed E. (n.d.). Human Activity Recognition: Scientific Perspective. Kaggle. [https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain](https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain)
+\[4] Meesala P. (n.d.). Human Activity Recognition - LSTM. Kaggle. [https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm](https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm)
 
-* 📘 "What does your smartphone know about you?" by morrisb
-  [https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook](https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook)
-
-* 📘 "SVM for Multiclass Classification" by pranathichunduru
-  [https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification](https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification)
-
-* 📘 "Human Activity Recognition: Scientific Perspective" by essammohamed4320
-  [https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain](https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain)
-
-* 📘 "Human Activity Recognition - LSTM" by prasadmeesala
-  [https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm](https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm)
-
-Their thoughtful analyses, modeling strategies, and clean implementation were instrumental in shaping the final structure of our experiments.
 
 ---
 
