@@ -78,6 +78,4 @@ If you use this dataset or replicate our pipelines, please cite:
 }
 ```
 
----
 
-Would you like me to export this to a markdown (.md) file for direct upload to your GitHub repository?
