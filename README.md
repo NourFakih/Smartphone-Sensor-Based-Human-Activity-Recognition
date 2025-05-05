@@ -45,7 +45,7 @@ This repository includes three Jupyter notebooks:
    This notebook reveals that while raw features can support strong classifiers, reduced features yield models that are lighter and potentially more robust to noise or overfitting.
 
 3. 📘 **FFt+models\_(3).ipynb**
-   This notebook works directly with the raw 3D accelerometer and gyroscope signals, applying FFT-based feature extraction. It investigates MLP-based models on these frequency-domain representations. While the results (\~95% with MLP) are promising, they were not included in the formal paper to avoid overcrowding the comparison. Nevertheless, they reinforce the viability of using raw-to-FFT pipelines for HAR tasks.
+   This notebook works directly with the raw 3D accelerometer and gyroscope signals, applying FFT-based feature extraction. It investigates MLP-based models and many more on these frequency-domain representations. While the results (\~95% with MLP) are promising, they were not included in the formal paper to avoid overcrowding the comparison. Nevertheless, they reinforce the viability of using raw-to-FFT pipelines for HAR tasks.
 
 ---
 > Several modeling ideas were adapted or extended from public Kaggle notebooks that inspired our pipelines \[1]\[2]\[3]\[4]. Their thoughtful analyses, modeling strategies, and clean implementation were instrumental in shaping the final structure of our experiments.
