@@ -83,8 +83,11 @@ If you use this dataset or replicate our pipelines, please cite:
 ## 📚 References
 
 \[1] Morris B. (n.d.). What does your smartphone know about you? Kaggle. [https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook](https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook)
+
 \[2] Chunduru P. (n.d.). SVM for Multiclass Classification. Kaggle. [https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification](https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification)
+
 \[3] Mohamed E. (n.d.). Human Activity Recognition: Scientific Perspective. Kaggle. [https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain](https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain)
+
 \[4] Meesala P. (n.d.). Human Activity Recognition - LSTM. Kaggle. [https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm](https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm)
 
 
