@@ -77,5 +77,29 @@ If you use this dataset or replicate our pipelines, please cite:
   note         = {Accessed: 2025-05-04}
 }
 ```
+Great! Here's how you can acknowledge the Kaggle notebooks that supported your work in your README under a new Acknowledgments section:
+
+---
+
+## 🙏 Acknowledgments
+
+We would like to thank the authors of the following Kaggle notebooks, whose insights and implementations significantly helped guide our development and experimentation for this project:
+
+* 📘 "What does your smartphone know about you?" by morrisb
+  [https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook](https://www.kaggle.com/code/morrisb/what-does-your-smartphone-know-about-you/notebook)
+
+* 📘 "SVM for Multiclass Classification" by pranathichunduru
+  [https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification](https://www.kaggle.com/code/pranathichunduru/svm-for-multiclass-classification)
+
+* 📘 "Human Activity Recognition: Scientific Perspective" by essammohamed4320
+  [https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain](https://www.kaggle.com/code/essammohamed4320/human-activity-recognition-scientific-prespective#Time-Domain)
+
+* 📘 "Human Activity Recognition - LSTM" by prasadmeesala
+  [https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm](https://www.kaggle.com/code/prasadmeesala/human-activity-recognition-lstm)
+
+Their thoughtful analyses, modeling strategies, and clean implementation were instrumental in shaping the final structure of our experiments.
+
+---
+
 
 
